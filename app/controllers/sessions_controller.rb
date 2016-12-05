@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
     user.name         = auth['name']
     user.joined_on    = auth['created_at']
     user.location     = auth['location']
+    user.email        = auth['email']
     user.save
 
     session[:user_id] = user.id
