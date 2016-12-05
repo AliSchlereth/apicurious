@@ -1,0 +1,7 @@
+<%= link_to "Logout", logout_path, method: :delete %>
+
+<%= image_tag(current_user.profile_pic) %>
+<h2><%= current_user.username %></h2>
+<h4><%= current_user.name %></h4>
+<h4><%= current_user.location %></h4>
+<h4><%= current_user.joined_on %></h4>
