@@ -4,5 +4,6 @@
   <h6><%= current_user.name %></h6>
   <h6><%= current_user.location %></h6>
   <h6><%= current_user.email %></h6>
-  <h6>Joined on <%= current_user.joined_on %></h6>
+  <!--move datetime to model method  -->
+  <h6>Joined on <%= current_user.joined_on.to_datetime.strftime("%b %d, %Y") %></h6>
 </div>
