@@ -44,6 +44,12 @@
   border-radius: 5px;
 }
 
+.form-control, .form-inline {
+  margin-top: 3px;
+  max-height: 25px;
+  vertical-align: middle;
+}
+
 .side-nav {
   height: 100%;
   width: 10px;
