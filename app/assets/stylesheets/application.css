@@ -13,3 +13,44 @@
  *= require_tree .
  *= require_self
  */
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.nav-bar {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav-link:hover {
+  color: #4078c0 !important;
+}
+
+.nav_pic {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.pr-3 {
+  padding-right: 16px !important;
+}
+
+.float-left {
+  float: left !important;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+* {
+  box-sizing: border-box;
+}
