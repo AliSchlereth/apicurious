@@ -14,6 +14,11 @@
  *= require_self
  */
 
+ html {
+   font-family: sans-serif;
+   display: block;
+ }
+
 .profile-pic {
   width: 200px;
   height: 200px;
@@ -39,7 +44,19 @@
   border-radius: 5px;
 }
 
-.pr-3 {
+.side-nav {
+  height: 100%;
+  width: 10px;
+  position: fixed;
+  top: 20;
+  right: 0;
+  padding: 0;
+  list-style: none;
+  overflow-y: scroll;
+  z-index: 1000;
+}
+
+/*.pr-3 {
   padding-right: 16px !important;
 }
 
@@ -53,4 +70,4 @@
 
 * {
   box-sizing: border-box;
-}
+}*/
