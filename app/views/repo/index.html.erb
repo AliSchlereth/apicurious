@@ -1,0 +1,6 @@
+<%= render partial: "shared/sidenav" %>
+
+
+<% @repos.each do |repo| %>
+  <p><%= repo.name %></p>
+<% end  %>
