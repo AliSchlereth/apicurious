@@ -13,4 +13,27 @@ describe "Profile" do
       expect(user.location).to be_truthy
     end
   end
+
+  context "#find_followers" do
+    it "returns a user's followers" do
+      token = ENV["github_user_token"]
+      followers = Profile.find_followers(token)
+
+      expect(followers).to be_a(Array)
+      expect(followers[0]).to be_a(Profile)
+      expect(followers[0].joined_on).to be_truthy
+    end
+  end
+
+  context "#find_following" do
+    it "returns who a user is following" do
+      token = ENV["github_user_token"]
+      following = Profile.find_following(token)
+
+      expect(following).to be_a(Array)
+      expect(following[0]).to be_a(Profile)
+      expect(following[0].joined_on).to be_truthy
+    end
+  end
+
 end

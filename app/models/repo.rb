@@ -15,7 +15,6 @@ class Repo
     repos = service.get_repos.map do |repo_info|
       Repo.new(repo_info)
     end
-    repos.sort! { |a,b| b.updated_at <=> a.updated_at }
   end
 
 end

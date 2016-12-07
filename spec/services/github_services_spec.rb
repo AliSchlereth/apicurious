@@ -23,4 +23,25 @@ describe "github services" do
       expect(response[:login]).to eq("AliSchlereth")
     end
   end
+
+  context "find_followers" do
+    it "returns a user's follower" do
+      token = ENV["github_user_token"]
+      response = GithubService.new(token).get_followers
+
+      expect(response).to be_a(Array)
+      expect(response[0][:login]).to be_truthy
+    end
+  end
+
+  context "find_following" do
+    it "returns a user's follower" do
+      token = ENV["github_user_token"]
+      response = GithubService.new(token).get_following
+
+      expect(response).to be_a(Array)
+      expect(response[0][:login]).to be_truthy
+    end
+  end
+
 end
