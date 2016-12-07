@@ -74,5 +74,15 @@ describe "github services" do
     end
   end
 
+  context "get_organizations" do
+    it "returns an array of a users organizations" do
+      token = ENV["github_user_token"]
+      response = GithubService.new(token).get_organizations
+
+      expect(response).to be_a(Array)
+      expect(response[0]).to have_key(:login) 
+    end
+  end
+
 
 end
