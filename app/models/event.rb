@@ -10,7 +10,14 @@ class Event
 
   def self.by_user(token, username)
     service = GithubService.new(token)
-    service.get_events(username).map do |event_info|
+    service.get_user_events(username).map do |event_info|
+      Event.new(event_info)
+    end
+  end
+
+  def self.rcvd_by_user(token, username)
+    service = GithubService.new(token)
+    service.get_rcvd_events(username).map do |event_info|
       Event.new(event_info)
     end
   end

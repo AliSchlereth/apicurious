@@ -54,14 +54,25 @@ describe "github services" do
     end
   end
 
-  context "get commits" do
+  context "get a users events" do
     it "returns all events for a user" do
       token = ENV["github_user_token"]
-      response = GithubService.new(token).get_events("AliSchlereth")
+      response = GithubService.new(token).get_user_events("AliSchlereth")
 
       expect(response).to be_an(Array)
       expect(response[0][:type]).to be_truthy
     end
   end
+
+  context "get rcvd events" do
+    it "returns all received events for a user" do
+      token = ENV["github_user_token"]
+      response = GithubService.new(token).get_rcvd_events("AliSchlereth")
+
+      expect(response).to be_an(Array)
+      expect(response[0][:type]).to be_truthy
+    end
+  end
+
 
 end
