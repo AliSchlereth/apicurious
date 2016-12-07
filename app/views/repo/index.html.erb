@@ -1,11 +1,14 @@
 <%= render partial: "shared/sidenav", locals: {sidenav: @profile} %>
 
-<div class="col-md-7">
+<%= render partial: "shared/innernav" %>
+<%= render partial: "reponav" %>
+<div class="col-md-8">
   <div class="row">
     <% @repos.each do |repo| %>
-      <div class="card">
+      <div class="repo-list-item">
         <p><%=link_to repo.name, repo.url %></p>
         <p><%= repo.language %>     <%= repo.updated_at.to_datetime.strftime("%b %d, %Y") %></p>
+        <hr/>
       </div>
     <% end  %>
   </div>

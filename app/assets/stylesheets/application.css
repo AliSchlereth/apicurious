@@ -34,8 +34,16 @@
   margin-left: auto;
 }
 
-.nav-link:hover {
+.nav-link-top:hover {
   color: #4078c0 !important;
+}
+
+.nav-link {
+  color: grey;
+}
+
+.nav-link:hover {
+  color: black !important;
 }
 
 .nav_pic {
@@ -60,6 +68,11 @@
   list-style: none;
   overflow-y: scroll;
   z-index: 1000;
+}
+
+.repo-list-item {
+  padding-left: 30px;
+  padding-right: 50px;
 }
 
 /*.pr-3 {
