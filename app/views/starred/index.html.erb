@@ -1,0 +1,15 @@
+<%= render partial: "shared/sidenav", locals: {sidenav: @profile} %>
+
+
+
+ <div class="col-md-8">
+   <div class="row">
+     <% @starred.each do |starred| %>
+       <div class="repo-list-item">
+         <p class="repo-name"><%=link_to starred.name, starred.url %></p>
+         <pre class="repo-details"><%= starred.language %>      <%= starred.updated_at.to_datetime.strftime("%b %d, %Y") %></pre>
+         <hr/>
+       </div>
+     <% end  %>
+   </div>
+ </div>
