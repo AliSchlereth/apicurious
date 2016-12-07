@@ -2,12 +2,12 @@
 <div class="col-md-2"></div>
 <div class="col-md-2">
   <% if current_user %>
-    <%= image_tag(@profile.profile_pic, class:"profile-pic")  %>
-    <h2><%= @profile.username %></h2>
-    <h6><%= @profile.name %></h6><hr/>
-    <h6><%= image_tag('location.svg') %> <%= @profile.location %></h6>
-    <h6><%= image_tag('mail.svg') %> <%= @profile.email %></h6>
+    <p><%= image_tag(@profile.profile_pic, class:"profile-pic")  %></p>
+    <p class="side-nav-words"><%= @profile.username %></p>
+    <p class="side-nav-words"><%= @profile.name %></p><hr/>
+    <p class="side-nav-words"><%= image_tag('location.svg') %> <%= @profile.location %></p>
+    <p class="side-nav-words"><%= image_tag('mail.svg') %> <%= @profile.email %></p>
     <!--move datetime to model method  -->
-    <h6><%= image_tag('clock.svg') %> Joined on <%= @profile.joined_on.to_datetime.strftime("%b %d, %Y") %></h6><hr />
+    <p class="side-nav-words"><%= image_tag('clock.svg') %> Joined on <%= @profile.joined_on.to_datetime.strftime("%b %d, %Y") %></p><hr />
   <% end %>
 </div>

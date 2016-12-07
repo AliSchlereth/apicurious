@@ -6,8 +6,8 @@
   <div class="row">
     <% @repos.each do |repo| %>
       <div class="repo-list-item">
-        <p><%=link_to repo.name, repo.url %></p>
-        <p><%= repo.language %>     <%= repo.updated_at.to_datetime.strftime("%b %d, %Y") %></p>
+        <p class="repo-name"><%=link_to repo.name, repo.url %></p>
+        <pre class="repo-details"><%= repo.language %>      <%= repo.updated_at.to_datetime.strftime("%b %d, %Y") %></pre>
         <hr/>
       </div>
     <% end  %>

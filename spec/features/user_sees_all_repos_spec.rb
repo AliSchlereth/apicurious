@@ -4,7 +4,6 @@ describe "user sees their repos" do
   context "they click the repository tab" do
     profile = Profile.find_user("AliSchlereth")
 
-    visit dashboard_repositories_path
 
   end
 end

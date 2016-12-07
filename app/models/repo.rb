@@ -12,9 +12,10 @@ class Repo
 
   def self.find_by_user(username)
     service = GithubService.new
-    service.get_repos(username).map do |repo_info|
+    repos = service.get_repos(username).map do |repo_info|
       Repo.new(repo_info)
     end
+    repos.sort! { |a,b| b.updated_at <=> a.updated_at }
   end
 
 end

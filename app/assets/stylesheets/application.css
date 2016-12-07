@@ -29,7 +29,7 @@
   font-size: 13px;
   font-weight: 600;
   line-height: 20px;
-  width: 980px;
+  width: 900px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -70,9 +70,28 @@
   z-index: 1000;
 }
 
+.side-nav-words {
+  font-size: 75%;
+}
+.repo-name {
+  color: #4078c0;
+  font-weight: bold;
+}
+
+.repo-details {
+  font-size: 75%;
+  color: grey;
+  font-family: sans-serif;
+}
+
 .repo-list-item {
   padding-left: 30px;
-  padding-right: 50px;
+  padding-right: 100px;
+}
+
+
+.repo-nav, .inner-nav {
+  max-width: 750px;
 }
 
 /*.pr-3 {
