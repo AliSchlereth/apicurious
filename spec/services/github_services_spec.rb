@@ -30,7 +30,7 @@ describe "github services" do
       response = GithubService.new(token).get_followers
 
       expect(response).to be_a(Array)
-      expect(response[0][:login]).to be_truthy
+      expect(response[0]).to have_key(:login)
     end
   end
 
@@ -40,7 +40,7 @@ describe "github services" do
       response = GithubService.new(token).get_following
 
       expect(response).to be_a(Array)
-      expect(response[0][:login]).to be_truthy
+      expect(response[0]).to have_key(:login)
     end
   end
 
@@ -50,7 +50,7 @@ describe "github services" do
       response = GithubService.new(token).get_starred
 
       expect(response).to be_a(Array)
-      expect(response[0][:name]).to be_truthy
+      expect(response[0]).to have_key(:name)
     end
   end
 
@@ -60,7 +60,7 @@ describe "github services" do
       response = GithubService.new(token).get_user_events("AliSchlereth")
 
       expect(response).to be_an(Array)
-      expect(response[0][:type]).to be_truthy
+      expect(response[0]).to have_key(:type)
     end
   end
 
@@ -70,7 +70,7 @@ describe "github services" do
       response = GithubService.new(token).get_rcvd_events("AliSchlereth")
 
       expect(response).to be_an(Array)
-      expect(response[0][:type]).to be_truthy
+      expect(response[0]).to have_key(:type)
     end
   end
 
@@ -80,7 +80,7 @@ describe "github services" do
       response = GithubService.new(token).get_organizations
 
       expect(response).to be_a(Array)
-      expect(response[0]).to have_key(:login) 
+      expect(response[0]).to have_key(:login)
     end
   end
 

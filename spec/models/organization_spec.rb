@@ -7,9 +7,9 @@ describe "Organization" do
       orgs = Organization.by_user(token)
 
       expect(orgs).to be_a(Array)
-      expect(orgs[0].name).to be_truthy
-      expect(orgs[0].url).to be_truthy
-      expect(orgs[0].img).to be_truthy
+      expect(orgs[0]).to respond_to(:name)
+      expect(orgs[0]).to respond_to(:url)
+      expect(orgs[0]).to respond_to(:img)
     end
   end
 end

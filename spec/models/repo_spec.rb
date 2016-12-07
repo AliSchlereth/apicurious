@@ -8,10 +8,10 @@ describe "Repo" do
 
       expect(repos).to be_a(Array)
       expect(repos[0]).to be_a(Repo)
-      expect(repos[0].id).to be_truthy
-      expect(repos[0].name).to be_truthy
-      expect(repos[0].language).to be_truthy
-      expect(repos[0].url).to be_truthy
+      expect(repos[0]).to respond_to(:id)
+      expect(repos[0]).to respond_to(:name)
+      expect(repos[0]).to respond_to(:language)
+      expect(repos[0]).to respond_to(:url)
     end
   end
 
@@ -22,7 +22,7 @@ describe "Repo" do
 
       expect(starred).to be_an(Array)
       expect(starred[0]).to be_a(Repo)
-      expect(starred[0].language).to be_truthy
+      expect(starred[0]).to respond_to(:language)
     end
   end
 end
