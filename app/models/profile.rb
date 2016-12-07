@@ -1,6 +1,7 @@
 class Profile
 
-  attr_reader :name,
+  attr_reader :username,
+              :name,
               :email,
               :joined_on,
               :location,
@@ -10,6 +11,7 @@ class Profile
               :starred
 
   def initialize(attributes={})
+    @username     = attributes[:username]
     @name         = attributes[:name]
     @email        = attributes[:email]
     @joined_on    = attributes[:created_at]
