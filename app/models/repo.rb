@@ -10,9 +10,9 @@ class Repo
     @updated_at = attributes[:updated_at]
   end
 
-  def self.find_by_user(username)
-    service = GithubService.new
-    repos = service.get_repos(username).map do |repo_info|
+  def self.find_by_user(token)
+    service = GithubService.new(token)
+    repos = service.get_repos.map do |repo_info|
       Repo.new(repo_info)
     end
     repos.sort! { |a,b| b.updated_at <=> a.updated_at }

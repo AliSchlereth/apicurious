@@ -19,9 +19,9 @@ class Profile
     @profile_pic  = attributes[:avatar_url]
   end
 
-  def self.find_user(username)
-    service = GithubService.new
-    attributes = service.get_user(username)
+  def self.find_user(token)
+    service = GithubService.new(token)
+    attributes = service.get_user
     Profile.new(attributes)
   end
 

@@ -3,7 +3,8 @@ require "rails_helper"
 describe "Repo" do
   context ".get_repos" do
     it "returns instance of Repo" do
-      repos = Repo.find_by_user("AliSchlereth")
+      token = ENV["github_user_token"]
+      repos = Repo.find_by_user(token)
 
       expect(repos).to be_a(Array)
       expect(repos[0]).to be_a(Repo)
