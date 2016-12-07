@@ -17,4 +17,11 @@ class Repo
     end
   end
 
+  def self.find_starred(token)
+    service = GithubService.new(token)
+    starred = service.get_starred.map do |starred|
+      Repo.new(starred)
+    end 
+  end
+
 end

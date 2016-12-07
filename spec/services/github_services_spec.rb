@@ -44,4 +44,14 @@ describe "github services" do
     end
   end
 
+  context "get starred" do
+    it "returns user's starred repositories" do
+      token = ENV["github_user_token"]
+      response = GithubService.new(token).get_starred
+
+      expect(response).to be_a(Array)
+      expect(response[0][:name]).to be_truthy
+    end
+  end
+
 end

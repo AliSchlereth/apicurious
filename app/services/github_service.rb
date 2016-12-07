@@ -34,4 +34,9 @@ class GithubService
     parsed = JSON.parse(response.body, symbolize_names: true)
   end
 
+  def get_starred
+    response = @conn.get("/user/starred")
+    parsed = JSON.parse(response.body, symbolize_names: true)
+  end
+
 end
