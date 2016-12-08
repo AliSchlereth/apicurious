@@ -1,1 +1,13 @@
-<%= link_to "Login", "https://github.com/login/oauth/authorize?client_id=#{ENV["github_client_id"]}&scope=repo" %>
+<div class="container">
+  <div class="col-md-3"></div>
+<div class= "row home-page col-md-6">
+  <% @events.each do |event| %>
+    <div class="repo-list-item">
+      <p class="feed-item"><%= event.username %> <%= event.type %>
+                          <%= event.repo %> <%= event.created_at.to_datetime.strftime("%b %d, %Y") %></p>
+    </div><hr/>
+    <% end %>
+</div>
+<div class="col-md-3"></div>
+
+</div>

@@ -52,6 +52,7 @@
   border-radius: 5px;
 }
 
+
 .form-control, .form-inline {
   margin-top: 3px;
   max-height: 25px;
@@ -74,6 +75,10 @@
 .side-nav-words {
   font-size: 75%;
 }
+
+.side-nav-username {
+  font-weight: bold;
+}
 .repo-name {
   color: #4078c0;
   font-weight: bold;
@@ -92,7 +97,7 @@
 
 
 .repo-nav, .inner-nav {
-  max-width: 750px;
+  max-width: 660px;
 }
 
 .list-pic {
@@ -114,6 +119,30 @@
 .tag-default {
   background-color: lightgrey !important;
   color: black !important;
+}
+
+.pinned-repo {
+  margin-left: 30px;
+}
+
+.repo-left {
+  font-size: 90%;
+}
+
+.repo-right {
+  font-size: 75%;
+  float: right;
+  margin-right: 110px;
+  color: grey;
+}
+
+.feed-item {
+  font-size: 75%;
+  color: grey;
+}
+
+.home-page {
+  
 }
 
 /*.pr-3 {

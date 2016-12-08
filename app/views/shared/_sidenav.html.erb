@@ -3,7 +3,7 @@
 <div class="col-md-2">
   <% if current_user %>
     <p><%= image_tag(@profile.profile_pic, class:"profile-pic")  %></p>
-    <p class="side-nav-words"><%= @profile.username %></p>
+    <p class="side-nav-username"><%= @profile.username %></p>
     <p class="side-nav-words"><%= @profile.name %></p><hr/>
     <p class="side-nav-words"><%= image_tag('location.svg') %> <%= @profile.location %></p>
     <p class="side-nav-words"><%= image_tag('mail.svg') %> <%= @profile.email %></p>

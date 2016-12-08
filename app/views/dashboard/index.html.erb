@@ -1,9 +1,22 @@
 <%= render partial: "shared/sidenav", locals: {sidenav: @profile}  %>
 <%= render partial: "shared/innernav" %>
-<!-- <div class="col-md-8 inner-nav"> -->
-<%# @repos.each do |repo| %>
-  <!-- <div class="card card-block"> -->
-    <%#= repo.name %>
-  <!-- </div> -->
-  <%# end  %>
-<!-- </div> -->
+<div class="col-md-8 inner-nav">
+  <div class="row">
+    <p><span class="repo-left pinned-repo">Pinned Repositories</span><span class="repo-right pinned-repo">Customize your pinned Repositories</span></p>
+    <% @repos.each do |repo| %>
+      <div class="card card-block col-md-5 pinned-repo">
+        <p class="repo-name"><%= repo.name %></p>
+        <p class="repo-details"><%= repo.language %></p>
+      </div>
+    <% end  %>
+  </div>
+  <div class= "row">
+    <p class="pinned-repo">Contribution Activity</p>
+    <% @events.each do |event| %>
+      <div class="repo-list-item">
+        <p class="feed-item"><%= event.username %> <%= event.type %>
+                            <%= event.repo %> <%= event.created_at.to_datetime.strftime("%b %d, %Y") %></p>
+      </div><hr/>
+      <% end %>
+  </div>
+</div>
