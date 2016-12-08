@@ -9,5 +9,9 @@
     <p class="side-nav-words"><%= image_tag('mail.svg') %> <%= @profile.email %></p>
     <!--move datetime to model method  -->
     <p class="side-nav-words"><%= image_tag('clock.svg') %> Joined on <%= @profile.joined_on.to_datetime.strftime("%b %d, %Y") %></p><hr />
+    <p>Organizations</p>
+    <% organizations.each do |org| %>
+      <%=image_tag(org.img, class:"list-pic")%>
+    <% end  %>
   <% end %>
 </div>

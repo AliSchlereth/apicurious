@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe "github services" do
   context "get_repos" do
-    it "returns an array of repo json objects" do
+    it "returns an array of repo json objects", :vcr do
       token = ENV["github_user_token"]
       response = GithubService.new(token).get_repos
 
@@ -15,7 +15,7 @@ describe "github services" do
   end
 
   context "get_user" do
-    it "returns a user's info" do
+    it "returns a user's info", :vcr do
       token = ENV["github_user_token"]
       response = GithubService.new(token).get_user
 
@@ -25,7 +25,7 @@ describe "github services" do
   end
 
   context "find_followers" do
-    it "returns a user's follower" do
+    it "returns a user's follower", :vcr do
       token = ENV["github_user_token"]
       response = GithubService.new(token).get_followers
 
@@ -35,7 +35,7 @@ describe "github services" do
   end
 
   context "find_following" do
-    it "returns a user's follower" do
+    it "returns a user's follower", :vcr do
       token = ENV["github_user_token"]
       response = GithubService.new(token).get_following
 
@@ -45,7 +45,7 @@ describe "github services" do
   end
 
   context "get starred" do
-    it "returns user's starred repositories" do
+    it "returns user's starred repositories", :vcr do
       token = ENV["github_user_token"]
       response = GithubService.new(token).get_starred
 
@@ -55,7 +55,7 @@ describe "github services" do
   end
 
   context "get a users events" do
-    it "returns all events for a user" do
+    it "returns all events for a user", :vcr do
       token = ENV["github_user_token"]
       response = GithubService.new(token).get_user_events("AliSchlereth")
 
@@ -65,7 +65,7 @@ describe "github services" do
   end
 
   context "get rcvd events" do
-    it "returns all received events for a user" do
+    it "returns all received events for a user", :vcr do
       token = ENV["github_user_token"]
       response = GithubService.new(token).get_rcvd_events("AliSchlereth")
 
@@ -75,7 +75,7 @@ describe "github services" do
   end
 
   context "get_organizations" do
-    it "returns an array of a users organizations" do
+    it "returns an array of a users organizations", :vcr do
       token = ENV["github_user_token"]
       response = GithubService.new(token).get_organizations
 

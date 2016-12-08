@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe "Repo" do
   context ".find_by_user" do
-    it "returns instance of Repo" do
+    it "returns instance of Repo", :vcr do
       token = ENV["github_user_token"]
       repos = Repo.find_by_user(token)
 
@@ -16,7 +16,7 @@ describe "Repo" do
   end
 
   context ".find_starred" do
-    it "returns an array of starred repos" do
+    it "returns an array of starred repos", :vcr do
       token = ENV["github_user_token"]
       starred = Repo.find_starred(token)
 

@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe "Organization" do
   context "#by_user" do
-    it "returns an array of organizations for a user" do
+    it "returns an array of organizations for a user", :vcr do
       token = ENV["github_user_token"]
       orgs = Organization.by_user(token)
 

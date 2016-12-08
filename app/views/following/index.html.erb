@@ -1,0 +1,14 @@
+<%= render partial: "shared/sidenav", locals: {sidenav: @profile} %>
+<%= render partial: "shared/innernav" %>
+<div class="col-md-8">
+  <div class="row">
+    <% @following.each do |follow| %>
+      <div class="repo-list-item">
+        <p class="follower-details"><%= image_tag(follow.profile_pic, class:"list-pic") %>
+        <%= follow.name %>  <%= follow.username %></p>
+        <p class="follower-location"><%= image_tag('location.svg') %><%= follow.location %></p>
+        <hr/>
+      </div>
+    <% end  %>
+  </div>
+</div>
